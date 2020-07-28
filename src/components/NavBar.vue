@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-dark">
   <a class="navbar-brand" href="#">ColorPicker</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,13 +17,12 @@
 <script>
 export default {
   name: 'NavBar',
-  props: {
-    msg: String
-  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.bg-dark {
+	background-color: rgba(255,255,255,.9) !important;
+}
 </style>
