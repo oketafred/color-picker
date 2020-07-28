@@ -1,13 +1,16 @@
 <template>
   <div id="app">
     <NavBar/>
-    <div class="color-collection">
-			<div class="d-flex flex-wrap color-division" 
-      v-for="color in colors" 
-      :key="color.index"
-      :style="{backgroundColor: color}">
-      </div>
-	</div>
+    <div class="container-fluid">
+  <div class="row">
+    <div 
+    v-for="color in colors" 
+    :key="color.index" 
+    class="col-md-2 color-box" 
+    :style="{backgroundColor: color}">
+    </div>
+  </div>
+</div>
   </div>
 </template>
 
@@ -134,13 +137,13 @@ export default {
 
 <style>
 body {
-  min-height: 75rem;
+  min-height: 100vh;
   padding-top: 3.5rem;
 }
 .navbar {
 	background-color: #319795 !important;
 }
-.color-division {
+.color-box {
   width: 20%;
   height: 250px;
 }
