@@ -306,11 +306,12 @@ body {
   min-height: 100vh;
   padding-top: 3.5rem;
 }
-.navbar {
-	background-color: rgba(255,255,255,.9) !important;
-}
 .color-box {
   width: 20%;
   height: 250px;
+}
+.color-box:hover {
+  z-index: 999 !important;
+  cursor: pointer !important;
 }
 </style>
