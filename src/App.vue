@@ -1,30 +1,36 @@
 <template>
   <div id="app">
-    <NavBar/>
+    <NavBar />
     <div class="container-fluid">
-  <div class="row">
-    <div 
-    v-for="color in colors" 
-    :key="color.index" 
-    class="col-md-2 color-box" 
-    :style="{backgroundColor: color}">
+      <div class="row">
+        <div
+          v-for="color in colors"
+          :key="color.index"
+          class="col-md-2 color-box"
+          :style="{ backgroundColor: color }"
+        ></div>
+      </div>
     </div>
-  </div>
-</div>
+    <ScrollTop>
+      <a class="btn btn-light">
+        <vue-fontawesome icon="angle-double-up" size="3"></vue-fontawesome>
+      </a>
+    </ScrollTop>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
-
+import NavBar from "./components/NavBar.vue";
+import ScrollTop from "./components/ScrollToTop.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    NavBar
+    NavBar,
+    ScrollTop,
   },
   data() {
     return {
-      colors: [	
+      colors: [
         // "#C91F37",,
         "#DC3023",
         // COCHINEAL RED
@@ -294,11 +300,10 @@ export default {
         "#B83280",
         "#97266D",
         "#702459",
-      ]
-
-    }
+      ],
+    };
   },
-}
+};
 </script>
 
 <style>
@@ -313,5 +318,13 @@ body {
 .color-box:hover {
   z-index: 999 !important;
   cursor: pointer !important;
+}
+.btn {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding-top: 27px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
 }
 </style>
