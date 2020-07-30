@@ -321,8 +321,6 @@ body {
 }
 .btn {
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.55);
-  padding-top: 27px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
