@@ -312,7 +312,7 @@ body {
   padding-top: 3.5rem;
 }
 .color-box {
-  width: 20%;
+  min-width: 20%;
   height: 250px;
 }
 .color-box:hover {
