@@ -26,5 +26,15 @@ npm run build
 npm run lint
 ```
 
+
+## Author
+
+👤 **Author**
+
+- Github: [@oketafred](https://github.com/oketafred)
+- Twitter: [@oketafred](https://twitter.com/oketafred)
+- Linkedin: [Oketa Fred](https://www.linkedin.com/in/oketafred/)
+
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
