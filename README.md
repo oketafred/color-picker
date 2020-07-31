@@ -1,5 +1,11 @@
 # Color Picker
 
+
+### Live Demo
+
+[Live Demo Link](https://css-color-picker.netlify.app/)
+
+
 ## Project setup
 ```
 npm install
