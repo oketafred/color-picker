@@ -1,6 +1,6 @@
 # Color Picker
 
-![](https://drive.google.com/file/d/1OYYsMgMTiveZiyTeUO4_27XKymC_CH7I/view?usp=sharing)
+![](public/demo_image.png?raw=true "Title")
 
 ### Live Demo
 
