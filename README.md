@@ -1,5 +1,6 @@
 # Color Picker
 
+![](https://drive.google.com/file/d/1OYYsMgMTiveZiyTeUO4_27XKymC_CH7I/view?usp=sharing)
 
 ### Live Demo
 
