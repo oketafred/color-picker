@@ -1,5 +1,8 @@
 # Color Picker
 
+> This is a color picker project which can be used by developers to quicky copy color codes for used in their projects.
+
+
 ![](public/demo_image.png?raw=true "Title")
 
 ### Live Demo
