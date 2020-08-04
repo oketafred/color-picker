@@ -30,6 +30,7 @@
 import NavBar from "./components/NavBar.vue";
 import ScrollTop from "./components/ScrollToTop.vue";
 export default {
+  inject: ["notyf"],
   name: "App",
   components: {
     NavBar,
@@ -312,9 +313,11 @@ export default {
   },
   methods: {
     clipboardSuccessHandler({ value }) {
+      this.notyf.success(`Color ${value.color} Copied successfully!`);
       navigator.clipboard.writeText(value.color);
     },
     clipboardErrorHandler({ value }) {
+      this.notyf.error("Something when wrong, Please try again!");
       console.log("error", value);
     }
   }
