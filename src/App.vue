@@ -8,7 +8,14 @@
           :key="color.index"
           class="col-md-2 color-box"
           :style="{ backgroundColor: color }"
-        ></div>
+        >
+          <button
+            v-clipboard:copy="{color}"
+            v-clipboard:success="clipboardSuccessHandler"
+            v-clipboard:error="clipboardErrorHandler"
+            class="btn btn-secondary copy-button"
+          >Copy</button>
+        </div>
       </div>
     </div>
     <ScrollTop>
@@ -23,10 +30,11 @@
 import NavBar from "./components/NavBar.vue";
 import ScrollTop from "./components/ScrollToTop.vue";
 export default {
+  inject: ["notyf"],
   name: "App",
   components: {
     NavBar,
-    ScrollTop,
+    ScrollTop
   },
   data() {
     return {
@@ -299,10 +307,20 @@ export default {
         "#D53F8C",
         "#B83280",
         "#97266D",
-        "#702459",
-      ],
+        "#702459"
+      ]
     };
   },
+  methods: {
+    clipboardSuccessHandler({ value }) {
+      this.notyf.success(`Color ${value.color} Copied successfully!`);
+      navigator.clipboard.writeText(value.color);
+    },
+    clipboardErrorHandler({ value }) {
+      this.notyf.error("Something when wrong, Please try again!");
+      console.log("error", value);
+    }
+  }
 };
 </script>
 
@@ -317,12 +335,24 @@ body {
 }
 .color-box:hover {
   z-index: 999 !important;
-  cursor: pointer !important;
 }
 .btn {
   border-radius: 8px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
+}
+.copy-button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 0;
+  padding: 5px;
+  width: 70px;
+  line-height: 30px;
+  text-align: center;
+  opacity: 1;
+  z-index: 900;
+  cursor: pointer;
 }
 </style>
