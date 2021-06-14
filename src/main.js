@@ -3,6 +3,8 @@ import App from "./App.vue";
 
 import Clipboard from 'v-clipboard';
 
+import './assets/main.css';
+
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
 
